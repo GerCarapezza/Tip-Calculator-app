@@ -1,0 +1,195 @@
+/* Selecciona cualquier <a> que esté siendo activado
+a:active {
+    color: red;
+  } */
+
+body {
+  background-color: #c5e4e7;
+  /* general Background color*/
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+/* ---------------Main---------------- */
+main {
+  background-color: #fff;
+  max-width: 100vw;
+  padding: 5%;
+  border-radius: 1.5rem;
+  color: hsl(186, 14%, 43%);
+  margin-top: 17vh;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: scroll;
+
+}
+
+/*--------------- section ---------------*/
+#section {
+  width: 90%;
+  height: 50%;
+  padding: 3%;
+  /* height: 40vh; */
+  /* background-color: rgba(255, 0, 0, 0.24); */
+  /*debugging*/
+}
+
+main input {
+  font-size: 24px;
+}
+
+input {
+  font-weight: 700;
+
+}
+
+.button {
+  background-color: #00494d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  height: 5vh;
+}
+
+.button:hover {
+  background-color: #95d1d6;
+  color: #00494d;
+}
+
+.input__number {
+  border: none;
+  background-color: #a4fafa;
+  border-radius: 5px;
+  text-align: end;
+  padding: 10px 2% 10px 0;
+  width: 98%;
+}
+
+#bill {
+  max-width: 100%;
+}
+
+.bill__container {
+  max-width: 100%;
+}
+
+.tip__container {
+  display: grid;
+  grid-template-columns: repeat(2, 47.5%);
+  grid-gap: 0.8em 5%;
+  grid-template-rows: 1.2rem repeat(3, 2.5rem);
+}
+
+.tip__container label {
+  grid-column: 1 / 3;
+  grid-row: 1/2;
+}
+
+.tip__container .button {
+  height: 100%;
+}
+
+#custom {
+  grid-column: 2/3;
+  width: auto;
+  grid-row: 4/5;
+}
+
+/* --------------Show data aside-------------- */
+aside {
+  display: flex;
+  background-color: #00494d;
+  height: 28vh;
+  width: 100%;
+  border-radius: 15px;
+  padding: 5%;
+  padding-top: 0;
+  flex-wrap: wrap;
+}
+
+.showData__container {
+  width: 100%;
+  height: 70%;
+  padding: 0;
+  margin: 0;
+}
+
+aside h2 {
+  display: inline-block;
+  font-size: 2.3rem;
+  color: #26c0ab;
+  margin: 20px;
+  position: absolute;
+  right: 0;
+  padding-right: 5%;
+}
+
+aside img {
+  font-size: 2.5rem;
+  color: #26c0ab;
+  padding: 0;
+  width: 15px;
+}
+
+aside h3 {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  bottom: -15px;
+  font-size: 16px;
+}
+
+aside label {
+  color: #7f9c9f;
+  font-size: 13px;
+}
+
+.reset {
+  display: block;
+  width: 100%;
+  margin: auto;
+  background-color: #26c0ab;
+  border: none;
+  color: #00494d;
+}
+
+/* -------------- footter -------------------*/
+footer {
+  display: flex;
+  align-self: flex-end;
+  background-color: blue;
+}
+
+/*------------- responsive ---------------- */
+
+@media only screen and (min-width: 800px) {
+  main {
+    background-color: #fff;
+    max-width: 30vw;
+    padding: 5%;
+    border-radius: 1.5rem;
+    color: hsl(186, 14%, 43%);
+    margin: auto;
+    margin-top: 15vh;
+    height: 50vh;
+  }
+
+  #section {
+    padding: 3%;
+    grid-column: 1 / 3;
+    /* height: 40vh; */
+    /* background-color: rgba(255, 0, 0, 0.24); */
+    /*debugging*/
+  }
+
+  aside {
+    background-color: #00494d;
+    height: 28vh;
+    border-radius: 15px;
+    padding: 5%;
+    padding-top: 0;
+  }
+}

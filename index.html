@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
 
 
 </head>
+
 <body>
+  <main class="main__conatainer">
+    <section id="section">
+      <div class="bill__container">
+        <label>Bill</label>
+        <br>
+        <input type="number" class="input__number" id="bill" min="0" minlength="1" placeholder="0"
+          onchange="billFunction()">
+      </div>
+      <br>
 
-  Bill
+      <div class="tip__container">
+        <label>Select Tip %</label>
+        <input type="button" class="button" value="5%" onclick="number(5)" id="five">
+        <input type="button" class="button" value="10%" onclick="number(10)" id="teen">
+        <input type="button" class="button" value="15%" onclick="number(15)" id="fifteen">
+        <input type="button" class="button" value="25%" onclick="number(25)" id="twentyfive">
+        <input type="button" class="button" value="50%" onclick="number(50)" id="fifty">
+        <input type="number" onchange="number(1)" class="input__number" placeholder="Custom" id="custom" minlength="1"
+          maxlength="3" min="0">
+      </div>
+      <br>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="numberPeople__container">
+        <label>Number of People</label>
+        <br>
+        <input type="number" class="input__number" id="number-people" name="number-people" min="1" minlength="1"
+          placeholder="1" onchange="numberPeople()">
+      </div>
+    </section>
 
-  Number of People
 
-  Tip Amount
-  / person
+    <aside>
+      <div class="showData__container">
+        <h3>
+          Tip Amount
+          <br>
+          <label>/ person</label>
+        </h3>
+        <h2 id="showTip"><img src="images/icon-dollar.svg">0.00</h2>
 
-  Total
-  / person
+        <br>
+        <h3>
+          Total
+          <br>
+          <label>/ person</label>
+        </h3>
+        <h2 id="showTotal"><img src="images/icon-dollar.svg">0.00</h2>
+      </div>
+      <input type="button" class="button reset" value="RESET" id="reset" onclick="resetButtom()">
+    </aside>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/GerCarapezza">German Carapezza</a>.
-  </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/GerCarapezza">German Carapezza</a>.
+    </div>
+  </footer>
+  <script src="codigo.js"></script>
 </body>
+
 </html>
